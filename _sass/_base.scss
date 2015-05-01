@@ -1,9 +1,9 @@
 
 body {
   padding-top: 50px;
-  background: #222;
+  background: #FFFF26;
   font-family: "Lato", sans-serif;
-  color: #fff;
+  color: #000;
 }
 
 h2 {
@@ -67,14 +67,24 @@ h2 {
   top: 38%;
   left: 15%;
   text-align: center;
-  color: #999;
+  color: #000;
 }
 .counter {
   font-size: 100px;
   line-height: 1;
-  color: #fff;
+  color: #000;
 }
 .seconds {
   text-transform: uppercase;
   text-align: center;
+}
+
+.bike {
+  width: 250px;
+  height: 200px;
+  background: url("images/bike.png");
+  background-size: cover;
+  position: fixed;
+  bottom: -5px;
+  left: -25%;
 }

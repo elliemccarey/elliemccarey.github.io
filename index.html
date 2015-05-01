@@ -27,6 +27,8 @@ layout: default
   </div>
   
   <div class="scroll-prompt">Scroll down &darr;</div>
+  
+  <div class="bike"></div>
 	
 </div>
 
@@ -49,6 +51,10 @@ $(document).ready(function() {
 	setInterval(function(){
 	  $('.counter').text(seconds);
 	  seconds++;
+	}, 1000);
+	
+	setTimeout(function(){
+	  $('.bike').animate({left: '8%'});
 	}, 1000);
 	
 });
