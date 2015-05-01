@@ -1,0 +1,5 @@
+---
+layout: post
+categories: jekyll update
+---
+<h2>I know you’ll leave, but before you do I want to share some ideas with you.</h2>
