@@ -34,17 +34,14 @@
 											"#bs-example-navbar-collapse-1" data-toggle="collapse" type=
 											"button"><span class="sr-only">Toggle navigation</span>
 											<span class="icon-bar"></span><span class="icon-bar"></span>
-											<span class="icon-bar"></span></button> <a class="navbar-brand"
-											href="#page">EMME</a>
+											<span class="icon-bar"></span></button> <a class="navbar-brand scroll"
+											href="#start">EMME</a>
 									</div>
 									<!-- Collect the nav links, forms, and other content for toggling -->
 
 									<div class="collapse navbar-collapse" id=
 									"bs-example-navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
-													<li>
-															<a class="navbar-default" href="#page">Home</a>
-													</li>
 
 													<li>
 															<a class="navbar-default scroll" href=
@@ -69,7 +66,9 @@
 					<div class="jumbotron">
 							<div class="container">
 									<div class="row">
-											<div class="col-md-offset-4 col-md-8">
+											<div class="col-sm-offset-4 col-sm-8">
+											    <div id="start"></div>
+											    
 													<p>Hi. I’m Ellie.</p>
 
 													<h2>I design user experiences.</h2>
@@ -81,7 +80,7 @@
 					<div class="jumbotron">
 							<div class="container">
 									<div class="row">
-											<div class="col-md-offset-4 col-md-8">
+											<div class="col-sm-offset-4 col-sm-8">
 													<h2>That means I’ve thought a lot about your visit
 													today.</h2>
 											</div>
@@ -92,7 +91,7 @@
 					<div class="jumbotron">
 							<div class="container">
 									<div class="row">
-											<div class="col-md-offset-4 col-md-8">
+											<div class="col-sm-offset-4 col-sm-8">
 													<h2>I’m glad you’re here and I want you to stick
 													around.</h2>
 											</div>
@@ -103,7 +102,7 @@
 					<div class="jumbotron">
 							<div class="container">
 									<div class="row">
-											<div class="col-md-offset-4 col-md-8">
+											<div class="col-sm-offset-4 col-sm-8">
 													<h2>I know you’ll leave, but before you do I want to share
 													some ideas with you.</h2>
 											</div>
@@ -114,7 +113,7 @@
 					<div class="jumbotron">
 							<div class="container">
 									<div class="row">
-											<div class="col-md-offset-4 col-md-8">
+											<div class="col-sm-offset-4 col-sm-8">
 													<div id="projects"></div>
 
 													<h2>Internal dashboards simplify management processes,
@@ -203,7 +202,7 @@
 					<div class="jumbotron">
 							<div class="container">
 									<div class="row">
-											<div class="col-md-offset-4 col-md-8">
+											<div class="col-sm-offset-4 col-sm-8">
 													<h2>Don’t you think the Kindle app could use some
 													socialising?</h2>
 													
@@ -271,7 +270,7 @@
 					<div class="jumbotron">
 							<div class="container">
 									<div class="row">
-											<div class="col-md-offset-4 col-md-8">
+											<div class="col-sm-offset-4 col-sm-8">
 													<div id="gousto"></div>
 
 													<h2>Wouldn't it be good if Gousto was personal?</h2>
@@ -340,7 +339,7 @@
 				<div class="jumbotron">
 					<div class="container">
 							<div class="row">
-									<div class="col-md-offset-4 col-md-8">
+									<div class="col-sm-offset-4 col-sm-8">
 											<div id="cv"></div>
 
 											<h2>Take a look at my CV!</h2>
@@ -356,7 +355,7 @@
 					<div class="jumbotron">
 							<div class="container">
 									<div class="row">
-											<div class="col-md-offset-4 col-md-8">
+											<div class="col-sm-offset-4 col-sm-8">
 													<div id="contact"></div><br>
 
 													<h2>Let's talk!</h2>
@@ -437,18 +436,16 @@
 		});
 		
 
-	   $(".navbar-default.scroll").click(function(event){
+	   $(".scroll").click(function(event){
         event.preventDefault();
         // alert("clicked our menu link");
-        var clickedLink=$(this);
-        clickedLink.css("font-weight","bold");
-        var target=clickedLink.attr("href");
-        console.log (target);
-        var scrollTo=$(target);
-        console.log (scrollTo);
-        scrollTo.css("font-style","italic");
-        var top=scrollTo.offset().top;
-        console.log(top)
+        $('a').removeClass('active');
+        var clickedLink = $(this);
+        $(this).addClass('active');
+        var target = clickedLink.attr("href");
+        var scrollTo = $(target);
+        var top = parseFloat(scrollTo.offset().top) - 200;
+
         $("html,body").stop().animate(
         {
             'scrollTop': top

@@ -22,8 +22,14 @@ h2 {
 .navbar-default .navbar-nav > li > a {
    color: #eee;
 }
+.navbar-default .navbar-nav > li > a:focus {
+   color: #fff;
+}
 .navbar-default .navbar-nav > li > a:hover {
    color: #FFE734;
+}
+.active {
+  font-weight: bold;
 }
 .container .jumbotron,.container-fluid .jumbotron {
     border-radius:0
