@@ -1,5 +1,0 @@
----
-layout: post
-categories: jekyll update
----
-<h2>I’m glad you’re here and I want you to stick around.</h2>
